@@ -33,9 +33,17 @@ button1.onclick = () => {
 let result2Performed = false;
 
 const performResult2 = () => {
-  const url = "json.json";
+  const urlTwo = "MusicGroups.json";
+  fetch(urlTwo)
+    .then((response) => response.json())
+    .then((data) => {
+      data.music.forEach((item) => {
+        output2.innerHTML += `<p>${item.instrument} is a ${item.type} music instrument and it's popularity is ${item.popularity}</p>`;
+      });
+    });
+  const urlOne = "SportGroups.json";
   let xmlHR = new XMLHttpRequest();
-  xmlHR.open("GET", url);
+  xmlHR.open("GET", urlOne);
   xmlHR.responseType = "json";
   xmlHR.onload = () => {
     let data = xmlHR.response;
