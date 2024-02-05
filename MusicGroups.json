@@ -1,0 +1,29 @@
+{
+  "music": [
+    {
+      "instrument": "Trumpet",
+      "type": "Brass",
+      "popularity": "65%"
+    },
+    {
+      "instrument": "Piano",
+      "type": "Chordophone",
+      "popularity": "81%"
+    },
+    {
+      "instrument": "Clarinet",
+      "type": "Woodwind",
+      "popularity": "57%"
+    },
+    {
+      "instrument": "Guitar",
+      "type": "String",
+      "popularity": "77%"
+    },
+    {
+      "instrument": "Drums",
+      "type": "Percussion",
+      "popularity": "71%"
+    }
+  ]
+}
