@@ -59,3 +59,24 @@ const performResult2 = () => {
 button2.onclick = () => {
   if (!result2Performed) performResult2();
 };
+
+const githubURL =
+  "https://api.github.com/search/repositories?q=tetris&sort=stars&order=desc";
+
+button3.addEventListener("click", getData);
+
+function getData(e) {
+  e.preventDefault();
+  fetch(githubURL)
+    .then((res) => res.json())
+    .then((data) => mHTML(data.items));
+}
+
+function mHTML(val) {
+  output3.innerHTML = "";
+  for (let x = 1; x < val.length; x++) {
+    let div = document.createElement("div");
+    div.innerHTML = `${val[x].name} <a href="${val[x].url}" target="_blank">${val[x].description}</a>`;
+    output3.appendChild(div);
+  }
+}
