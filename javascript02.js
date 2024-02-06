@@ -75,7 +75,7 @@ function getData(e) {
 function mHTML(val) {
   output3.innerHTML = "";
   for (let x = 1; x < val.length; x++) {
-    let div = document.createElement("div");
+    let div = document.createElement("p");
     div.innerHTML = `${val[x].name} <a href="${val[x].url}" target="_blank">${val[x].description}</a>`;
     output3.appendChild(div);
   }
